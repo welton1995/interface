@@ -6,3 +6,21 @@ li:hover {
   border-radius: 6px;
   background-color: #0d6dfd93;
 }
+
+.principal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tabela {
+  margin: .25rem;
+  width: 80vw;
+  border: 1px solid black;
+}
+
+@media (max-width: 480px){
+  .logo{
+    width: 36px;
+  }
+}
