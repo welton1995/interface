@@ -1,3 +1,7 @@
+body {
+  font-family: 'Vollkorn', Georgia, serif;
+}
+
 li {
   margin-top: .5rem;
 }
@@ -17,6 +21,11 @@ li:hover {
   margin: .25rem;
   width: 80vw;
   border: 1px solid black;
+}
+
+.sombra {
+  color: white;
+  text-shadow: 2px 2px 2px black;
 }
 
 @media (max-width: 480px){
