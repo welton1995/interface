@@ -24,9 +24,8 @@ li:hover {
 }
 
 .tabela {
-  margin: .25rem;
-  width: 80vw;
-  /* border: 1px solid black; */
+  min-width: 90%;
+
 }
 
 .sombra {
@@ -54,13 +53,15 @@ li:hover {
 .ocult {
   display: none;
 }
+
+
+
+
 @media (max-width: 480px){
   .logo{
     width: 36px;
   }
-  .tabela {
-    margin: 0 1.5rem;
-  }
+
   .conteudo-tabela {
     display: flex;
     flex-direction: column;
@@ -76,5 +77,14 @@ li:hover {
 
   .ocult {
     display: block;
+  }
+
+  .tabela {
+  margin: 1rem 0;
+   min-width: auto;
+  }
+  
+  .lateral {
+    display: none;
   }
 }
