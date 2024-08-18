@@ -26,12 +26,25 @@ li:hover {
 .tabela {
   margin: .25rem;
   width: 80vw;
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 .sombra {
   color: white;
   text-shadow: 2px 2px 2px black;
+}
+
+.icon {
+  margin: .125rem;
+}
+
+.logo {
+  transition: .2s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(5px 5px 5px #0d6dfd93);
 }
 
 @media (max-width: 480px){
