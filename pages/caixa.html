@@ -128,6 +128,7 @@
       <div class="d-flex justify-content-center align-items-center tabela">
         <div class="row py-4 container d-flex align-items-start justify-content-center" style="border-radius: 16px; background: linear-gradient(to bottom, #3a3a3a 0%, #9db0b8) 100%;">
       
+          <!-- Tabela fluxo de caixa -->
           <div class="pagina">
             <div class="align-items-start">
               <h1 class="sombra">
@@ -141,7 +142,6 @@
               </h1>
             </div>
           </div>
-          <!-- Tabela fluxo de caixa -->
           <div class="conteudo-tabela">
             <div id="conteudo" class="table-responsive ">
               <table class="table">
@@ -259,66 +259,112 @@
             </table>
             </div>
           </div>
+
           <!-- Tabela Transações -->
-          <div class="conteudo-tabela">
+          <div class="pagina">
             <div class="align-items-start">
               <h2 class="sombra">
                 <strong>Transações</strong>
-                <img src="../img/transacoes.png" width="36px" class="images">
+                <img src="../img/transacoes.png" width="32px" class="images">
               </h2>
             </div>
-            <div id="conteudo">
-              <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col" class="text-center">Tipo <img src="../img/chave.png" alt="" width="16px"></th>
-                        <th scope="col" class="text-center">Categoria <img src="../img/categoria.png" alt="" width="16px"></th>
-                        <th scope="col" class="text-center">Obs <img src="../img/observacao.png" alt="" width="16px"></th>
-                        <th scope="col" class="text-center">Data‎ ‎ ‎ <img src="../img/data.png" alt="" width="16px"></th>
-                        <th scope="col" class="text-center">Ações <img src="../img/opcoes.png" width="16px"></th>
-                    </tr>
-                </thead>
-                <tbody id="tabela">
-                  <tr>
-                    <td class="text-center align-middle">Gorja Stam</td>
-                    <td class="text-center align-middle">GS1</td>
-                    <td class="text-center align-middle">1</td>
-                    <td class="text-center align-middle">18/08/24</td>
-                    <td class="text-center align-middle">
-                      <a href="pages/remover.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/remover.png" width="24px" title="Saída de Estoque" class="icon"></a>
-                      <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/adicionar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
-                      <a href="pages/excluirChave.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
-                    </td>
-                  </tr>
-                </tbody>
-            </table>
+            <div class="align-items-end">
+              <button class="btn btn-primary mb-3"  data-bs-toggle="modal" data-bs-target="#meuModal">Adicionar</button>
             </div>
           </div>
+          <div class="conteudo-tabela">
+                      <div id="conteudo">
+                        <table class="table">
+                          <thead>
+                              <tr>
+                                  <th scope="col" class="text-center">Tipo <img src="../img/tipo.png" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Categoria <img src="../img/categoria.png" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Obs <img src="../img/observacao.png" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Data‎ ‎ ‎ <img src="../img/data.png" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Ações <img src="../img/opcoes.png" width="16px"></th>
+                              </tr>
+                          </thead>
+                          <tbody id="tabela">
+                            <tr>
+                              <td class="text-center align-middle">Gorja Stam</td>
+                              <td class="text-center align-middle">GS1</td>
+                              <td class="text-center align-middle">1</td>
+                              <td class="text-center align-middle">18/08/24</td>
+                              <td class="text-center align-middle">
+                                <a href="pages/remover.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/remover.png" width="24px" title="Saída de Estoque" class="icon"></a>
+                                <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/adicionar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
+                                <a href="pages/excluirChave.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
+                              </td>
+                            </tr>
+                          </tbody>
+                      </table>
+          
+                      <!-- Modal -->
+          <div class="modal fade" id="meuModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Adicionar Transação</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="container mt-4">
+                    <form>
+                      <!-- Campo Tipo (Select) -->
+                      <div class="mb-3">
+                        <label for="tipo" class="form-label">Tipo</label>
+                        <select class="form-select" id="tipo" name="tipo">
+                          <option value="Receitas">Receitas</option>
+                          <option value="Despesas">Despesas</option>
+                        </select>
+                      </div>
+                
+                      <!-- Campo Categoria (Select) -->
+                      <div class="mb-3">
+                        <label for="categoria" class="form-label">Categoria</label>
+                        <select class="form-select" id="categoria" name="categoria">
+                          <option value="Alimentação">Alimentação</option>
+                          <option value="Transporte">Transporte</option>
+                          <option value="Moradia">Moradia</option>
+                          <option value="Educação">Educação</option>
+                          <option value="Saúde">Saúde</option>
+                          <option value="Lazer">Lazer</option>
+                        </select>
+                      </div>
+                
+                      <!-- Campo Observação (Textarea) -->
+                      <div class="mb-3">
+                        <label for="observacao" class="form-label">Observação</label>
+                        <textarea class="form-control" id="observacao" name="observacao" rows="3"></textarea>
+                      </div>
+                
+                      <!-- Campo Data (Input Date) -->
+                      <div class="mb-3">
+                        <label for="data" class="form-label">Data</label>
+                        <input type="date" class="form-control" id="data" name="data">
+                      </div>
+              
+                    </form>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-primary">Salvar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+                      </div>
+          </div>
         </div>
+        
       </div>
+
+
  
     </div>
 
-   <script>
-    const darkHtml = document.querySelector('#darkHTML');
-    const darkBtn = document.querySelector('#darkBtn');
 
-    darkBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      try {
-        if(darkHtml.hasAttribute('data-bs-theme')){
-          darkHtml.removeAttribute('data-bs-theme')
-
-          darkBtn.src = './img/night-mode.png'
-        }
-        else{
-          darkHtml.setAttribute('data-bs-theme', 'dark');
-        }
-      } catch (error) {
-        return console.log(error);
-      }
-    })
-   </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
