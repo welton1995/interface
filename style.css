@@ -54,8 +54,25 @@ li:hover {
   display: none;
 }
 
+#servicos td:hover:nth-child(n+2),
+#vendas td:hover:nth-child(n+2),
+#outros td:hover:nth-child(n+2),
+#luz td:hover:nth-child(n+2),
+#matariaPrima td:hover:nth-child(n+2),
+#ferramentas td:hover:nth-child(n+2),
+#despesasOutros td:hover:nth-child(n+2)
+{
+  background-color: #0d6dfd93;
+  color: white;
+  cursor: default;
+}
+
 
 @media (max-width: 480px){
+  th {
+    background-color: aqua;
+  }
+
   .logo{
     width: 36px;
   }
@@ -93,6 +110,10 @@ li:hover {
 
   .table-responsive {
     max-width: 350;;
+  }
+
+  .imageMobile{
+    display: none;
   }
   
 }

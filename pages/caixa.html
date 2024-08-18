@@ -126,7 +126,7 @@
       <!-- ============ TESTE =============== -->
 
       <div class="d-flex justify-content-center align-items-center tabela">
-        <div class="row py-4 container d-flex align-items-start justify-content-center" style="border-radius: 16px; background: linear-gradient(to bottom, #3a3a3a 0%, #9db0b8) 100%;">
+        <div class="row py-4 container d-flex align-items-start justify-content-center" style="border-radius: 16px; background: linear-gradient(to bottom, #3a3a3a 0%, #9db0b8) 100%; margin: 1rem 0">
       
           <!-- Tabela fluxo de caixa -->
           <div class="pagina">
@@ -163,6 +163,7 @@
                     </tr>
                 </thead>
                 <tbody id="tabela">
+                  <!-- RECEITAS -->
                   <tr>
                     <th class="text-center align-middle">Receitas (+)</th>
                     <td></td>
@@ -178,24 +179,58 @@
                     <td></td>
                     <td></td>
                   </tr>
-                  <tr>
-                    <td class="text-center align-middle" >Clientes</td>
-                    <td>R$ 1.000</td>
-                    <td>R$ 1.100</td>
-                    <td>R$ 1.030</td>
-                    <td>R$ 1.500</td>
-                    <td>R$ 1.700</td>
-                    <td>R$ 1.020</td>
-                    <td>R$ 1.800</td>
-                    <td>R$ 1.910</td>
-                    <td>R$ 1.010</td>
-                    <td>R$ 1.930</td>
-                    <td>R$ 1.700</td>
-                    <td>R$ 1.700</td>
+                  <!-- SERVIÇOS -->
+                  <tr id="servicos">
+                    <td class="text-center align-middle" >Serviços</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <!-- VENDAS -->
+                  <tr id="vendas">
+                    <td class="text-center align-middle" >Vendas</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <!-- OUTROS -->
+                  <tr id="outros">
+                    <td class="text-center align-middle" >Outros</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
 
+                  <!-- DESPESAS -->
                   <tr>
-                    <th class="text-center align-middle">Despesas ( - )</th>
+                    <th class="text-center align-middle">Despesas (-)</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -209,22 +244,76 @@
                     <td></td>
                     <td></td>
                   </tr>
-                  <tr>
+
+                  <!-- LUZ -->
+                  <tr id="luz">
                     <td class="text-center align-middle" >Luz</td>
-                    <td>R$ 250,00</td>
-                    <td>R$ 1.100</td>
-                    <td>R$ 1.030</td>
-                    <td>R$ 1.500</td>
-                    <td>R$ 1.700</td>
-                    <td>R$ 1.020</td>
-                    <td>R$ 1.800</td>
-                    <td>R$ 1.910</td>
-                    <td>R$ 1.010</td>
-                    <td>R$ 1.930</td>
-                    <td>R$ 1.700</td>
-                    <td>R$ 1.700</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
                   </tr>
 
+                  <!-- MATERIA PRIMA -->
+                  <tr id="materiaPrima">
+                    <td class="text-center align-middle" >Materia Prima</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <!-- FERRAMENTAS -->
+                  <tr id="ferramentas">
+                    <td class="text-center align-middle" >Ferramentas</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+
+                  <!-- outros -->
+                  <tr id="despesasOutros">
+                    <td class="text-center align-middle" >Outros</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>            
+
+                  <!-- SALDO -->
                   <tr>
                     <th class="text-center align-middle">Saldo (=)</th>
                     <td></td>
@@ -240,20 +329,22 @@
                     <td></td>
                     <td></td>
                   </tr>
-                  <tr>
+
+                  <!-- TOTAL -->
+                  <tr id="meses">
                     <td class="text-center align-middle" ></td>
-                    <th>R$ 250,00</th>
-                    <th>R$ 1.100</th>
-                    <th>R$ 1.030</th>
-                    <th>R$ 1.500</th>
-                    <th>R$ 1.700</th>
-                    <th>R$ 1.020</th>
-                    <th>R$ 1.800</th>
-                    <th>R$ 1.910</th>
-                    <th>R$ 1.010</th>
-                    <th>R$ 1.930</th>
-                    <th>R$ 1.700</th>
-                    <th>R$ 1.700</th>
+                    <th id="jan"></th>
+                    <th id="fev"></th>
+                    <th id="mar"></th>
+                    <th id="abr"></th>
+                    <th id="mai"></th>
+                    <th id="jun"></th>
+                    <th id="jul"></th>
+                    <th id="ago"></th>
+                    <th id="set"></th>
+                    <th id="out"></th>
+                    <th id="nov"></th>
+                    <th id="dez"></th>
                   </tr>
                 </tbody>
             </table>
@@ -277,27 +368,16 @@
                         <table class="table">
                           <thead>
                               <tr>
-                                  <th scope="col" class="text-center">Tipo <img src="../img/tipo.png" alt="" width="16px"></th>
-                                  <th scope="col" class="text-center">Categoria <img src="../img/categoria.png" alt="" width="16px"></th>
-                                  <th scope="col" class="text-center">Obs <img src="../img/observacao.png" alt="" width="16px"></th>
-                                  <th scope="col" class="text-center">Valor‎ ‎ ‎ <img src="../img/valor.png" alt="" width="16px"></th>
-                                  <th scope="col" class="text-center">Data‎ ‎ ‎ <img src="../img/data.png" alt="" width="16px"></th>
-                                  <th scope="col" class="text-center">Ações <img src="../img/opcoes.png" width="16px"></th>
+                                  <th scope="col" class="text-center">Tipo <img src="../img/tipo.png" class="imageMobile" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Categoria <img src="../img/categoria.png" class="imageMobile" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Obs <img src="../img/observacao.png" class="imageMobile" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Valor‎ ‎ ‎ <img src="../img/valor.png" class="imageMobile" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Data‎ ‎ ‎ <img src="../img/data.png" class="imageMobile" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Ações <img src="../img/opcoes.png" class="imageMobile" width="16px"></th>
                               </tr>
                           </thead>
-                          <tbody id="tabela">
-                            <tr>
-                              <td class="text-center align-middle">Gorja Stam</td>
-                              <td class="text-center align-middle">GS1</td>
-                              <td class="text-center align-middle">isto é um teste</td>
-                              <td class="text-center align-middle">12.50</td>
-                              <td class="text-center align-middle">18/08/24</td>
-                              <td class="text-center align-middle">
-                                <a href="pages/remover.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/remover.png" width="24px" title="Saída de Estoque" class="icon"></a>
-                                <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/adicionar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
-                                <a href="pages/excluirChave.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
-                              </td>
-                            </tr>
+                          <tbody id="tabelaTransacao">
+                            <!-- conteudo que vem do banco de dados -->
                           </tbody>
                       </table>
           
@@ -356,12 +436,12 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-                  <button type="button" class="btn btn-primary">Salvar</button>
+                  <button type="button" class="btn btn-primary" id="btnModal">Salvar</button>
                 </div>
               </div>
             </div>
           </div>
-                      </div>
+          </div>
           </div>
         </div>
         
@@ -373,5 +453,6 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="../js/caixa.js"></script>
   </body>
 </html>
