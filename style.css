@@ -39,6 +39,10 @@ li:hover {
 }
 
 .logo {
+  margin: 0.5rem;
+}
+
+.logo {
   transition: .2s ease-in-out;
 }
 
