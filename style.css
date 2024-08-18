@@ -47,6 +47,9 @@ li:hover {
   filter: drop-shadow(5px 5px 5px #0d6dfd93);
 }
 
+.ocult {
+  display: none;
+}
 @media (max-width: 480px){
   .logo{
     width: 36px;
@@ -65,5 +68,9 @@ li:hover {
   }
   .navbar-toggler-icon {
     filter: invert(1);
+  }
+
+  .ocult {
+    display: block;
   }
 }
