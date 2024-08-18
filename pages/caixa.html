@@ -280,6 +280,7 @@
                                   <th scope="col" class="text-center">Tipo <img src="../img/tipo.png" alt="" width="16px"></th>
                                   <th scope="col" class="text-center">Categoria <img src="../img/categoria.png" alt="" width="16px"></th>
                                   <th scope="col" class="text-center">Obs <img src="../img/observacao.png" alt="" width="16px"></th>
+                                  <th scope="col" class="text-center">Valor‎ ‎ ‎ <img src="../img/valor.png" alt="" width="16px"></th>
                                   <th scope="col" class="text-center">Data‎ ‎ ‎ <img src="../img/data.png" alt="" width="16px"></th>
                                   <th scope="col" class="text-center">Ações <img src="../img/opcoes.png" width="16px"></th>
                               </tr>
@@ -288,7 +289,8 @@
                             <tr>
                               <td class="text-center align-middle">Gorja Stam</td>
                               <td class="text-center align-middle">GS1</td>
-                              <td class="text-center align-middle">1</td>
+                              <td class="text-center align-middle">isto é um teste</td>
+                              <td class="text-center align-middle">12.50</td>
                               <td class="text-center align-middle">18/08/24</td>
                               <td class="text-center align-middle">
                                 <a href="pages/remover.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/remover.png" width="24px" title="Saída de Estoque" class="icon"></a>
@@ -323,13 +325,18 @@
                       <div class="mb-3">
                         <label for="categoria" class="form-label">Categoria</label>
                         <select class="form-select" id="categoria" name="categoria">
-                          <option value="Alimentação">Alimentação</option>
-                          <option value="Transporte">Transporte</option>
-                          <option value="Moradia">Moradia</option>
-                          <option value="Educação">Educação</option>
-                          <option value="Saúde">Saúde</option>
-                          <option value="Lazer">Lazer</option>
+                          <option value="Serviços">Serviços</option>
+                          <option value="Vendas">Vendas</option>
+                          <option value="Luz">Luz</option>
+                          <option value="Matéria Prima">Matéria Prima</option>
+                          <option value="Ferramentas">Ferramentas</option>
+                          <option value="Outros">Outros</option>
                         </select>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="valor" class="form-label">Valor (R$)</label>
+                        <input type="number" step='0.01' class="form-control" id="valor" name="valor" rows="3"></textarea>
                       </div>
                 
                       <!-- Campo Observação (Textarea) -->
