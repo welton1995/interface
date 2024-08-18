@@ -47,4 +47,7 @@ li:hover {
     align-items: center;
     justify-content: center;
   }
+  .images {
+    width: 32px;
+  }
 }
