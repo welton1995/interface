@@ -17,6 +17,12 @@ li:hover {
   justify-content: space-between;
 }
 
+.pagina {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .tabela {
   margin: .25rem;
   width: 80vw;
