@@ -55,8 +55,6 @@ li:hover {
 }
 
 
-
-
 @media (max-width: 480px){
   .logo{
     width: 36px;
@@ -67,6 +65,7 @@ li:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 320px;
   }
   .images {
     width: 32px;
@@ -87,4 +86,13 @@ li:hover {
   .lateral {
     display: none;
   }
+
+  .table {
+   width: 400px;
+  }
+
+  .table-responsive {
+    max-width: 300px;;
+  }
+  
 }
