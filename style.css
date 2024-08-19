@@ -54,6 +54,10 @@ li:hover {
   display: none;
 }
 
+.arrow {
+  display: none;
+}
+
 #servicos td:hover:nth-child(n+2),
 #vendas td:hover:nth-child(n+2),
 #outros td:hover:nth-child(n+2),
@@ -69,10 +73,6 @@ li:hover {
 
 
 @media (max-width: 480px){
-  th {
-    background-color: aqua;
-  }
-
   .logo{
     width: 36px;
   }
@@ -115,5 +115,22 @@ li:hover {
   .imageMobile{
     display: none;
   }
+
+  .arrow {
+    display: flex;
+    position: relative;
+    color: white;
+    animation: seta .6s ease-in 0s infinite alternate;
+
+  }
+
   
+  @keyframes seta{
+    from {
+      right: 30px;
+    }
+    to {
+      right: 20px;
+    }
+  }
 }
