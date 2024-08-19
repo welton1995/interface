@@ -35,6 +35,13 @@ li:hover {
 
 .icon {
   margin: .125rem;
+  transition: .2s ease-in-out;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(3px 3px 3px black);
 }
 
 .logo {

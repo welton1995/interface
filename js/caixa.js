@@ -56,7 +56,7 @@ const listarTransacoes = async () => {
     const resposta = await resultado.json();
 
     console.log(resposta.transacoes);
-    resposta.transacoes.forEach(transacao => {
+    resposta.transacoes.reverse().forEach(transacao => {
       const conteudo = document.createElement('tr');
 
       conteudo.innerHTML = `
@@ -66,8 +66,7 @@ const listarTransacoes = async () => {
                               <td class="text-center align-middle">${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                               <td class="text-center align-middle">${new Date(transacao.data).toLocaleDateString('pt-BR')}</td>
                               <td class="text-center align-middle">
-                                <a href="pages/remover.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/remover.png" width="24px" title="Saída de Estoque" class="icon"></a>
-                                <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/adicionar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
+                                <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/editar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
                                 <a href="pages/excluirChave.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
                               </td>
       `
@@ -265,7 +264,7 @@ const materiaPrimaMeses = async () => {
 
 materiaPrimaMeses();
 
-// FERRAMENTAS PRIMA POR MES
+// FERRAMENTAS POR MES
 const ferramentasMeses = async () => {
   try {
     const ferramentas = document.querySelector('#ferramentas');
@@ -295,7 +294,7 @@ const ferramentasMeses = async () => {
 
 ferramentasMeses();
 
-// FERRAMENTAS PRIMA POR MES
+// OUTROS DESPESAS POR MES
 const despesasOutrosMeses = async () => {
   try {
     const outros = document.querySelector('#despesasoutros');
