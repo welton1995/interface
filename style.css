@@ -80,6 +80,12 @@ li:hover {
   cursor: default;
 }
 
+.line {
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+  font-weight: bolder;
+}
+
 
 @media (max-width: 480px){
   .logo{
@@ -128,8 +134,6 @@ li:hover {
   td{
     white-space: nowrap;
   }
-
-
 
   .table-responsive {
     max-width: 350;;
