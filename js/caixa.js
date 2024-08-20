@@ -35,7 +35,7 @@ const salvasTransacao = async () => {
     }
   }
 
-  const resultado = await fetch('http://localhost:3333/transacoes', opcoesRequisicao);
+  const resultado = await fetch(`${url}/transacoes`, opcoesRequisicao);
   const resposta = await resultado.json();
 
   alert('Transação criada com sucesso!');
