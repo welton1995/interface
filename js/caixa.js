@@ -4,6 +4,8 @@ const observacaoModal = document.querySelector('#observacao');
 const valorModal = document.querySelector('#valor');
 const dataModal = document.querySelector('#data');
 const btnModal = document.querySelector('#btnModal');
+const btnEditar = document.querySelector('#btnEditar');
+
 
 
 // CRIAR UMA NOVA TRANSAÇÃO ===========================================================================================
@@ -11,6 +13,10 @@ const salvasTransacao = async () => {
     if(!valorModal.value) {
       valorModal.focus();
       return alert('Preencha o valor e tente novamente!');
+    }
+
+    if(categoriaModal.value === 'Selecione uma categoria'){
+      return categoriaModal.focus();
     }
 
   const dados = {
@@ -66,12 +72,13 @@ const listarTransacoes = async () => {
                               <td class="text-center align-middle">${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                               <td class="text-center align-middle">${new Date(transacao.data).toLocaleDateString('pt-BR')}</td>
                               <td class="text-center align-middle">
-                                <a href="pages/adicionar.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/editar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
-                                <a href="pages/excluirChave.html?id=6647bfc31891f8b30cddd4bd&amp;nome=Gorja Stam&amp;codigo=GS1&amp;quantidade=1"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
+                                <a href="./editarTransacao.html?id=${transacao._id}"><img src="../img/editar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
+                                <a href="./excluirTransacao.html?id=${transacao._id}&tipo=${transacao.tipo}&categoria=${transacao.categoria}&observacao=${transacao.observacao}&valor=${transacao.valor}&data=${transacao.data}"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
                               </td>
       `
       tabela.appendChild(conteudo);
     });
+
   } catch (error) {
     return console.log(error);
   }

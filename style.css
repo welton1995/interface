@@ -65,6 +65,10 @@ li:hover {
   display: none;
 }
 
+.not:hover {
+  cursor: not-allowed;
+}
+
 #servicos td:hover:nth-child(n+2),
 #vendas td:hover:nth-child(n+2),
 #outros td:hover:nth-child(n+2),
