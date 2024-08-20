@@ -1,3 +1,5 @@
+const url = `https://backend-interface-theta.vercel.app`;
+
 const tipoModal = document.querySelector('#tipo');
 const categoriaModal = document.querySelector('#categoria');
 const observacaoModal = document.querySelector('#observacao');
@@ -5,8 +7,6 @@ const valorModal = document.querySelector('#valor');
 const dataModal = document.querySelector('#data');
 const btnModal = document.querySelector('#btnModal');
 const btnEditar = document.querySelector('#btnEditar');
-
-
 
 // CRIAR UMA NOVA TRANSAÇÃO ===========================================================================================
 const salvasTransacao = async () => {
@@ -58,10 +58,9 @@ btnModal.addEventListener('click', (e)=> {
 const listarTransacoes = async () => {
   try {
     const tabela = document.querySelector('#tabelaTransacao');
-    const resultado = await fetch('http://localhost:3333/transacoes');
+    const resultado = await fetch(`${url}/transacoes`);
     const resposta = await resultado.json();
 
-    console.log(resposta.transacoes);
     resposta.transacoes.reverse().forEach(transacao => {
       const conteudo = document.createElement('tr');
 
@@ -90,7 +89,7 @@ listarTransacoes();
 const diferancaMeses = async () => {
   try {
     const meses = document.querySelector('#meses');
-    const resultado = await fetch('http://localhost:3333/transacoes/saldomeses');
+    const resultado = await fetch(`${url}/transacoes/saldomeses`);
     const resposta = await resultado.json();
 
     meses.innerHTML = `
@@ -109,11 +108,6 @@ const diferancaMeses = async () => {
                     <th id="dez">${resposta.resultado[11].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
     `
 
-
-    console.log(resposta.resultado);
-
-
-
   } catch (error) {
     return console.log(error);
   }
@@ -125,7 +119,7 @@ diferancaMeses();
 const servicosMeses = async () => {
   try {
     const servicos = document.querySelector('#servicos');
-    const resultado = await fetch('http://localhost:3333/transacoes/servicosmeses');
+    const resultado = await fetch(`${url}/transacoes/servicosmeses`);
     const resposta = await resultado.json();
 
     servicos.innerHTML = `
@@ -143,7 +137,6 @@ const servicosMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log(resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -155,7 +148,7 @@ servicosMeses();
 const vendasMeses = async () => {
   try {
     const vendas = document.querySelector('#vendas');
-    const resultado = await fetch('http://localhost:3333/transacoes/vendasmeses');
+    const resultado = await fetch(`${url}/transacoes/vendasmeses`);
     const resposta = await resultado.json();
 
     vendas.innerHTML = `
@@ -173,7 +166,6 @@ const vendasMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("aqui", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -185,7 +177,7 @@ vendasMeses();
 const outrosMeses = async () => {
   try {
     const outros = document.querySelector('#outros');
-    const resultado = await fetch('http://localhost:3333/transacoes/outrosMeses');
+    const resultado = await fetch(`${url}/transacoes/outrosMeses`);
     const resposta = await resultado.json();
 
     outros.innerHTML = `
@@ -203,7 +195,6 @@ const outrosMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("aqui", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -215,7 +206,7 @@ outrosMeses();
 const luzMeses = async () => {
   try {
     const luz = document.querySelector('#luz');
-    const resultado = await fetch('http://localhost:3333/transacoes/luzmeses');
+    const resultado = await fetch(`${url}/transacoes/luzmeses`);
     const resposta = await resultado.json();
 
     luz.innerHTML = `
@@ -233,7 +224,6 @@ const luzMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("luz", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -245,7 +235,7 @@ luzMeses();
 const materiaPrimaMeses = async () => {
   try {
     const materiaPrima = document.querySelector('#materiaPrima');
-    const resultado = await fetch('http://localhost:3333/transacoes/materiaprimameses');
+    const resultado = await fetch(`${url}/transacoes/materiaprimameses`);
     const resposta = await resultado.json();
 
     materiaPrima.innerHTML = `
@@ -263,7 +253,6 @@ const materiaPrimaMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("mp", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -275,7 +264,7 @@ materiaPrimaMeses();
 const ferramentasMeses = async () => {
   try {
     const ferramentas = document.querySelector('#ferramentas');
-    const resultado = await fetch('http://localhost:3333/transacoes/ferramentasmeses');
+    const resultado = await fetch(`${url}/transacoes/ferramentasmeses`);
     const resposta = await resultado.json();
 
     ferramentas.innerHTML = `
@@ -293,7 +282,6 @@ const ferramentasMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("mp", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
@@ -305,7 +293,7 @@ ferramentasMeses();
 const despesasOutrosMeses = async () => {
   try {
     const outros = document.querySelector('#despesasoutros');
-    const resultado = await fetch('http://localhost:3333/transacoes/despesasoutrosmeses');
+    const resultado = await fetch(`${url}/transacoes/despesasoutrosmeses`);
     const resposta = await resultado.json();
 
     outros.innerHTML = `
@@ -323,7 +311,6 @@ const despesasOutrosMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
-   console.log("mp", resposta.resultado)
   } catch (error) {
     return console.log(error);
   }
