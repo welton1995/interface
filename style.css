@@ -24,7 +24,7 @@ li:hover {
 }
 
 .tabela {
-  min-width: 90%;
+  min-width: 100%;
 
 }
 
@@ -46,9 +46,6 @@ li:hover {
 
 .logo {
   margin: 0.5rem;
-}
-
-.logo {
   transition: .2s ease-in-out;
 }
 
@@ -64,6 +61,7 @@ li:hover {
 .arrow {
   display: none;
 }
+
 
 .not:hover {
   cursor: not-allowed;
@@ -115,9 +113,23 @@ li:hover {
     display: none;
   }
 
+
   .table {
-   width: 340px;
+   width: 400px;
   }
+
+  table {
+    table-layout: auto !important;
+    width: auto !important;
+    font-size: 14px !important;
+    box-sizing: border-box !important
+  }
+
+  td{
+    white-space: nowrap;
+  }
+
+
 
   .table-responsive {
     max-width: 350;;

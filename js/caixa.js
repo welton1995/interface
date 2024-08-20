@@ -93,19 +93,19 @@ const diferancaMeses = async () => {
     const resposta = await resultado.json();
 
     meses.innerHTML = `
-                    <td class="text-center align-middle" ></td>
-                    <th id="jan">${resposta.resultado[0].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="fev">${resposta.resultado[1].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="mar">${resposta.resultado[2].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="abr">${resposta.resultado[3].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="mai">${resposta.resultado[4].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="jun">${resposta.resultado[5].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="jul">${resposta.resultado[6].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="ago">${resposta.resultado[7].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="set">${resposta.resultado[8].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="out">${resposta.resultado[9].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="nov">${resposta.resultado[10].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
-                    <th id="dez">${resposta.resultado[11].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</th>
+                    <td class="text-center align-middle"></td>
+                    <td>${resposta.resultado[0].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[1].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[2].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[3].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[4].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[5].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[6].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[7].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[8].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[9].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[10].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                    <td>${resposta.resultado[11].diferenca.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
 
   } catch (error) {
