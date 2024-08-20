@@ -1,3 +1,5 @@
+const url = `https://backend-interface-theta.vercel.app`;
+
 const tipoEditar = document.querySelector('#tipo');
 const categoriaEditar = document.querySelector('#categoria'); 
 const observacaoEditar = document.querySelector('#observacao');
@@ -5,8 +7,8 @@ const valorEditar = document.querySelector('#valor');
 const dataEditar = document.querySelector('#data');
 const btn = document.querySelector('#btnModal');
 
-const url = new URL(window.location.href);
-const params = new URLSearchParams(url.search);
+const urlNavedor = new URL(window.location.href);
+const params = new URLSearchParams(urlNavedor.search);
 
 const id = params.get('id');
 const tipo = params.get('tipo');
@@ -57,7 +59,7 @@ const excluirTransacao = async ()=> {
       }
     }
 
-    const resultado = await fetch(`http://localhost:3333/transacoes/${id}`, opcoesRequisicao);
+    const resultado = await fetch(`${url}/transacoes/${id}`, opcoesRequisicao);
     const resposta = await resultado.json();
 
     if(resposta === 'Transação excluida com sucesso!'){

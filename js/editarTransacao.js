@@ -1,3 +1,5 @@
+const url = `https://backend-interface-theta.vercel.app`;
+
 const tipoEditar = document.querySelector('#tipo');
 const categoriaEditar = document.querySelector('#categoria'); 
 const observacaoEditar = document.querySelector('#observacao');
@@ -6,8 +8,8 @@ const dataEditar = document.querySelector('#data');
 const btn = document.querySelector('#btnModal');
 
 
-const url = new URL(window.location.href);
-const params = new URLSearchParams(url.search);
+const urlNavegador = new URL(window.location.href);
+const params = new URLSearchParams(urlNavegador.search);
 const id = params.get('id');
 
 
@@ -43,17 +45,17 @@ const editarTransacoes = async () => {
     }
   }
 
-  const resultado = await fetch(`http://localhost:3333/transacoes/${id}`, opcoesRequisicao);
+  const resultado = await fetch(`${url}/transacoes/${id}`, opcoesRequisicao);
   const resposta = await resultado.json();
 
   if(categoriaEditar.value === 'Selecione uma categoria'){
     return categoriaEditar.focus();
   }
 
-
-  console.log(resposta);
-
-  window.location.href = './caixa.html';
+  if(resposta === 'Transação atualizada com sucesso!'){
+    alert('Transação atualizada com sucesso!');
+    return window.location.href = './caixa.html';
+  }
 
   } catch (error) {
     return console.log(error);
