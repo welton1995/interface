@@ -15,7 +15,7 @@ const loading1 = document.querySelector('#loading1');
 const salvasTransacao = async () => {
     if(!valorModal.value) {
       valorModal.focus();
-      return alert('Preencha o valor e tente novamente!');
+      return valorModal.focus();
     }
 
     if(categoriaModal.value === 'Selecione uma categoria'){
