@@ -1,5 +1,6 @@
 body {
   font-family: 'Vollkorn', Georgia, serif;
+  font-size: 16px;
 }
 
 li {
@@ -25,6 +26,7 @@ li:hover {
 
 .tabela {
   min-width: 80%;
+  font-size: 12px;
 
 }
 
@@ -111,8 +113,8 @@ li:hover {
   }
 
   .tabela {
-  margin: 1rem 0;
-   min-width: auto;
+    margin: 1rem 0;
+    min-width: auto;
   }
   
   .lateral {
@@ -128,7 +130,8 @@ li:hover {
     table-layout: auto !important;
     width: auto !important;
     font-size: 14px !important;
-    box-sizing: border-box !important
+    box-sizing: border-box !important;
+    font-size: 12px !important
   }
 
   td{

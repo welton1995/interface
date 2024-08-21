@@ -133,7 +133,7 @@ const servicosMeses = async () => {
     const resposta = await resultado.json();
 
     servicos.innerHTML = `
-                    <td class="text-center align-middle" >Serviços</td>
+                    <td class="text-center align-middle" style="font-weight: 600">Serviços</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -329,3 +329,27 @@ const despesasOutrosMeses = async () => {
 }
 
 despesasOutrosMeses();
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Seleciona todas as linhas da tabela (exceto o cabeçalho)
+  const linhas = document.querySelectorAll("#tabelaTransacao tr");
+
+  // Itera sobre cada linha
+  linhas.forEach((linha) => {
+      // Seleciona o conteúdo da primeira célula da linha
+      const primeiraColuna = linha.querySelector("td").innerText.trim();
+
+      // Exibe o valor da primeira coluna no console para depuração
+      console.log(`Primeira coluna: ${primeiraColuna}`);
+
+      // Aplica a cor de fundo com base no conteúdo da primeira coluna
+      if (primeiraColuna === "Receitas") {
+          linha.style.backgroundColor = "#d4edda"; // Verde claro
+      } else if (primeiraColuna === "Despesas") {
+          linha.style.backgroundColor = "#f8d7da"; // Vermelho claro
+      }
+  });
+});
