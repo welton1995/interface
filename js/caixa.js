@@ -73,13 +73,13 @@ const listarTransacoes = async () => {
       const conteudo = document.createElement('tr');
 
       conteudo.innerHTML = `
-                              <td class="text-center align-middle">${transacao.tipo}</td>
-                              <td class="text-center align-middle">${transacao.categoria}</td>
-                              <td class="text-center align-middle">${transacao.observacao}</td>
-                              <td class="text-center align-middle">${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
-                              <td class="text-center align-middle">${new Date(transacao.data).toLocaleDateString('pt-BR')}</td>
-                              <td class="text-center align-middle">
-                                <a href="./editarTransacao.html?id=${transacao._id}"><img src="../img/editar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
+                              <td class="text-center align-middle transacaohover" style="font-weight: 600; font-size: 13px">${transacao.tipo}</td>
+                              <td class="text-center align-middle transacaohover" style="font-size: 13px">${transacao.categoria}</td>
+                              <td class="text-center align-middle transacaohover" style="font-size: 13px">${transacao.observacao}</td>
+                              <td class="text-center align-middle transacaohover" style="font-size: 13px">${transacao.valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
+                              <td class="text-center align-middle transacaohover" style="font-size: 13px">${new Date(transacao.data).toLocaleDateString('pt-BR')}</td>
+                              <td class="text-center align-middle transacaohover" style="font-size: 13px">
+                                <a href="./editarTransacao.html?id=${transacao._id}" ><img src="../img/editar.png" width="24px" title="Entrada de Estoque" class="icon"></a>
                                 <a href="./excluirTransacao.html?id=${transacao._id}&tipo=${transacao.tipo}&categoria=${transacao.categoria}&observacao=${transacao.observacao}&valor=${transacao.valor}&data=${transacao.data}"><img src="../img/lixeira.png" width="24px" title="Remover Chave" class="icon"></a>
                               </td>
       `
@@ -133,7 +133,7 @@ const servicosMeses = async () => {
     const resposta = await resultado.json();
 
     servicos.innerHTML = `
-                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Serviços</td>
+                    <td class="text-center align-middle" style="font-size: 13px">Serviços</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>

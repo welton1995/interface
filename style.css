@@ -88,6 +88,11 @@ li:hover {
   font-weight: bolder;
 }
 
+.transacaohover:hover  {
+  background-color: #0d6dfd93;
+  color: white;
+  cursor: default;
+}
 
 @media (max-width: 480px){
   .logo{
