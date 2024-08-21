@@ -133,7 +133,7 @@ const servicosMeses = async () => {
     const resposta = await resultado.json();
 
     servicos.innerHTML = `
-                    <td class="text-center align-middle" style="font-weight: 600">Serviços</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Serviços</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -164,7 +164,7 @@ const vendasMeses = async () => {
     const resposta = await resultado.json();
 
     vendas.innerHTML = `
-                    <td class="text-center align-middle" >Vendas</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Vendas</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -193,7 +193,7 @@ const outrosMeses = async () => {
     const resposta = await resultado.json();
 
     outros.innerHTML = `
-                    <td class="text-center align-middle" >Outros</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Outros</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -222,7 +222,7 @@ const luzMeses = async () => {
     const resposta = await resultado.json();
 
     luz.innerHTML = `
-                    <td class="text-center align-middle" >Luz</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Luz</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -251,7 +251,7 @@ const materiaPrimaMeses = async () => {
     const resposta = await resultado.json();
 
     materiaPrima.innerHTML = `
-                    <td class="text-center align-middle" >Materia Prima</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Materia Prima</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -280,7 +280,7 @@ const ferramentasMeses = async () => {
     const resposta = await resultado.json();
 
     ferramentas.innerHTML = `
-                    <td class="text-center align-middle" >Ferramentas</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px>Ferramentas</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
@@ -309,7 +309,7 @@ const despesasOutrosMeses = async () => {
     const resposta = await resultado.json();
 
     outros.innerHTML = `
-                    <td class="text-center align-middle" >Outros</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 14px">Outros</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
