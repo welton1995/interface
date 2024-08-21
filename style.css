@@ -125,8 +125,7 @@ li:hover {
   .lateral {
     display: none;
   }
-
-
+  
   .table {
    width: 380px;
   }
@@ -159,9 +158,7 @@ li:hover {
     font-weight: bolder;
   }
 
-  .menuMobile {
-    display: none;
-  }
+
 
   
   @keyframes seta{
