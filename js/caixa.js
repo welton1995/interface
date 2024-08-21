@@ -133,7 +133,7 @@ const servicosMeses = async () => {
     const resposta = await resultado.json();
 
     servicos.innerHTML = `
-                    <td class="text-center align-middle" style="font-size: 13px">Serviços</td>
+                    <td class="text-center align-middle" style="font-weight: 600; font-size: 13px">Serviços</td>
                     <td>${resposta.resultado[0].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[1].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[2].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
