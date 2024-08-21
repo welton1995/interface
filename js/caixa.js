@@ -38,10 +38,14 @@ const salvasTransacao = async () => {
   const resultado = await fetch(`${url}/transacoes`, opcoesRequisicao);
   const resposta = await resultado.json();
 
-  alert('Transação criada com sucesso!');
-  window.location.reload();
-
-  console.log(resposta);
+  if(resposta === 'Transação criada com sucesso!'){
+   await Swal.fire({
+      title: "Transação criada com sucesso!",
+      icon: "success",
+      confirmButtonColor: "#0275d8",
+    });
+    return window.location.reload();
+  }
 }
 
 btnModal.addEventListener('click', (e)=> {

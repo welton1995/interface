@@ -63,7 +63,13 @@ const excluirTransacao = async ()=> {
     const resposta = await resultado.json();
 
     if(resposta === 'Transação excluida com sucesso!'){
-      alert('Transação excluida com sucesso!');
+     
+     await Swal.fire({
+        title: "Transação excluida com sucesso!",
+        icon: "success",
+        confirmButtonColor: "#0275db"
+      })
+      // alert('Transação excluida com sucesso!');
       window.location.href = "./caixa.html";
     }
 

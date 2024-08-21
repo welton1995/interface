@@ -52,10 +52,21 @@ const editarTransacoes = async () => {
     return categoriaEditar.focus();
   }
 
+  console.log(resposta)
+
+  // if(resposta === 'Transação atualizada com sucesso!'){
+  //   alert('Transação atualizada com sucesso!');
+  //   return window.location.href = './caixa.html';
+  // }
+
   if(resposta === 'Transação atualizada com sucesso!'){
-    alert('Transação atualizada com sucesso!');
-    return window.location.href = './caixa.html';
-  }
+    await Swal.fire({
+       title: "Transação editada com sucesso!",
+       icon: "success",
+       confirmButtonColor: "#0275d8",
+     });
+     return window.location.href = './caixa.html';
+   }
 
   } catch (error) {
     return console.log(error);
