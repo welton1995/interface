@@ -8,7 +8,8 @@ const dataModal = document.querySelector('#data');
 const btnModal = document.querySelector('#btnModal');
 const btnEditar = document.querySelector('#btnEditar');
 const loading = document.querySelector('#loading');
-const loadingTabela = document.querySelector('#loadingTabela');
+const loading1 = document.querySelector('#loading1');
+
 
 // CRIAR UMA NOVA TRANSAÇÃO ===========================================================================================
 const salvasTransacao = async () => {
@@ -63,8 +64,7 @@ btnModal.addEventListener('click', (e)=> {
 // LISTAR TODAS AS TRANSAÇÕES ===================================================================================
 const listarTransacoes = async () => {
   try {
-    loading.style.display = 'block';
-    loadingTabela.style.display = 'block';
+    loading1.style.display = 'block';
     const tabela = document.querySelector('#tabelaTransacao');
     const resultado = await fetch(`${url}/transacoes`);
     const resposta = await resultado.json();
@@ -85,8 +85,7 @@ const listarTransacoes = async () => {
       `
       tabela.appendChild(conteudo);
     });
-    loading.style.display = 'none';
-    loadingTabela.style.display = 'none';
+    loading1.style.display = 'none';
 
   } catch (error) {
     return console.log(error);
@@ -128,6 +127,7 @@ diferancaMeses();
 // SERVIÇOS SOMA POR MES
 const servicosMeses = async () => {
   try {
+    loading.style.display = 'block'
     const servicos = document.querySelector('#servicos');
     const resultado = await fetch(`${url}/transacoes/servicosmeses`);
     const resposta = await resultado.json();
@@ -147,6 +147,8 @@ const servicosMeses = async () => {
                     <td>${resposta.resultado[10].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
                     <td>${resposta.resultado[11].totalReceitas.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</td>
     `
+    loading.style.display = 'none'
+
   } catch (error) {
     return console.log(error);
   }
