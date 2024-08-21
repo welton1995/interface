@@ -10,16 +10,22 @@ const btnEditar = document.querySelector('#btnEditar');
 const loading = document.querySelector('#loading');
 const loading1 = document.querySelector('#loading1');
 
-
 // CRIAR UMA NOVA TRANSAÇÃO ===========================================================================================
 const salvasTransacao = async () => {
-    if(!valorModal.value) {
-      valorModal.focus();
-      return valorModal.focus();
+    if(tipoModal.value === 'Selecione um tipo') {
+      return tipoModal.focus();
     }
 
     if(categoriaModal.value === 'Selecione uma categoria'){
       return categoriaModal.focus();
+    }
+
+    if(!valorModal.value) {
+      return valorModal.focus();
+    }
+
+    if(!dataModal.value) {
+      return dataModal.focus();
     }
 
   const dados = {

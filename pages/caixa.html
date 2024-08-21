@@ -117,7 +117,16 @@
               </a>
           </li>
 
-          <li class="nav-item submenu">
+          <li class="nav-item submenu submenuAtivo">
+            <a class="nav-link text-white" data-bs-toggle="collapse">
+              <img src="../img/atual.png" alt="" class="me-2 " width="24px">
+              <span class="d-none d-sm-inline">
+                Atual
+              </span>
+            </a>
+        </li>
+
+          <li class="nav-item submenu submenuAtivo">
             <a class="nav-link text-white" data-bs-toggle="collapse">
               <img src="../img/up.png" alt="" class="me-2 " width="24px">
               <span class="d-none d-sm-inline">
@@ -126,7 +135,7 @@
             </a>
         </li>
 
-        <li class="nav-item submenu">
+        <li class="nav-item submenu submenuAtivo">
           <a class="nav-link text-white" data-bs-toggle="collapse">
             <img src="../img/down.png" alt="" class="me-2 " width="24px">
             <span class="d-none d-sm-inline">
@@ -428,6 +437,7 @@
                       <div class="mb-3">
                         <label for="tipo" class="form-label">Tipo</label>
                         <select class="form-select" id="tipo" name="tipo">
+                          <option value="Selecione um tipo">Selecione um tipo</option>
                           <option value="Receitas">Receitas</option>
                           <option value="Despesas">Despesas</option>
                         </select>
