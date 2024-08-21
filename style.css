@@ -159,6 +159,10 @@ li:hover {
     font-weight: bolder;
   }
 
+  .menuMobile {
+    display: none;
+  }
+
   
   @keyframes seta{
     from {
