@@ -94,6 +94,16 @@ li:hover {
   cursor: default;
 }
 
+.submenuAtivo {
+  display: none;
+  transition: 1s ease-in-out;
+}
+
+#submenu:hover, .submenu{
+  cursor: pointer;
+}
+
+
 @media (max-width: 480px){
   .logo{
     width: 36px;
@@ -117,15 +127,23 @@ li:hover {
     display: block;
   }
 
+  .principal {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
   .tabela {
+    display: flex;
+    justify-content: center;
     margin: 1rem 0;
     min-width: auto;
+    overflow-x: scroll;
   }
   
   .lateral {
     display: none;
   }
-  
+
   .table {
    width: 380px;
   }
