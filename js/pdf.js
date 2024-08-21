@@ -4,16 +4,23 @@ const data = new Date();
 const nomeRelatório = data.toLocaleDateString("pt-BR", { year:'numeric', month: 'numeric', day: 'numeric' });
 
 btnGenerate.addEventListener('click', async () => {
-  const screenWidth = window.innerWidth;
-  const isMobile = screenWidth <= 768; // Verifica se é um dispositivo móvel
-  const scale = isMobile ? 0.7 : 1; // Ajusta a escala para dispositivos móveis
-
+  const isMobile = window.innerWidth <= 480;
+  
   const options = {
     margin: [2, 2, 2, 2],
     filename: `Relatório_Estoque_${nomeRelatório}.pdf`,
-    html2canvas: { scale: scale },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: isMobile ? 'portrait' : 'landscape' }
-  }
+    html2canvas: {
+      scale: window.devicePixelRatio, // Usa a densidade de pixels para melhorar a resolução
+      width: conteudo.scrollWidth, // Força a largura correta
+      height: conteudo.scrollHeight, // Força a altura correta
+      windowWidth: conteudo.scrollWidth // Evita cortes no conteúdo
+    },
+    jsPDF: { 
+      unit: 'mm', 
+      format: 'a4', 
+      orientation: 'landscape'
+    }
+  };
 
   // Gerar pdf
   await html2pdf().set(options).from(conteudo).save();
