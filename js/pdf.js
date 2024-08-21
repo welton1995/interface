@@ -19,7 +19,7 @@ btnGenerate.addEventListener('click', async () => {
     margin: [2, 2, 2, 2],
     filename: `Relatório_Estoque_${nomeRelatório}.pdf`,
     html2canvas: {
-      scale: window.devicePixelRatio, 
+      scale: 1, 
       width: conteudo.scrollWidth,
       height: conteudo.scrollHeight,
       windowWidth: conteudo.scrollWidth
