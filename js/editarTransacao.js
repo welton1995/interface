@@ -18,6 +18,10 @@ const editarTransacoes = async () => {
 
   try {
 
+    if(categoriaEditar.value === 'Selecione uma categoria'){
+      return categoriaEditar.focus();
+    }
+
     if(!valorEditar.value){
       valorEditar.focus();
       return alert("Preencha os campos corretamente e tente novamente!");
@@ -26,7 +30,6 @@ const editarTransacoes = async () => {
     if(!dataEditar.value){
       dataEditar.focus();
       return alert("Preencha os campos corretamente e tente novamente!");
-
     }
 
   const dados = {
@@ -48,16 +51,9 @@ const editarTransacoes = async () => {
   const resultado = await fetch(`${url}/transacoes/${id}`, opcoesRequisicao);
   const resposta = await resultado.json();
 
-  if(categoriaEditar.value === 'Selecione uma categoria'){
-    return categoriaEditar.focus();
-  }
+
 
   console.log(resposta)
-
-  // if(resposta === 'Transação atualizada com sucesso!'){
-  //   alert('Transação atualizada com sucesso!');
-  //   return window.location.href = './caixa.html';
-  // }
 
   if(resposta === 'Transação atualizada com sucesso!'){
     await Swal.fire({
