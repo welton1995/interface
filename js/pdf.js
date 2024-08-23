@@ -16,7 +16,7 @@ btnGenerate.addEventListener('click', async () => {
   });
 
   // Ajustar a escala dependendo do tamanho da tela
-  const scale = window.innerWidth < 768 ? 1 : 2; // Ajuste de escala para celular e computador
+  const scale = window.innerWidth < 480 ? 1 : 2; // Ajuste de escala para celular e computador
 
   const options = {
     margin: [2, 2, 2, 2],
